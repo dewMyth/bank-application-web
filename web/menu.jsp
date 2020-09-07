@@ -30,6 +30,7 @@
         <ul class="list-group list-group-horizontal-sm">
             <li class="list-group-item">
                 <form action="CheckBalanceServlet" method="GET">
+                    <input type="hidden" name="balance" value=${param.balance}>
                     <input class="btn btn-primary" type="submit" value="1. Check Balance">
                 </form>
             </li>

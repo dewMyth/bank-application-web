@@ -22,7 +22,8 @@ public class CheckBalanceServlet extends HttpServlet {
 
         //Step 3 - Generate HTML content
         out.println("<html><head>   <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\"  </head><body>");
-        out.println("Check Balance");
+        out.println("Your Balance is Balance : " + request.getParameter("balance"));
+
         out.println("</body></html>");
     }
 }
