@@ -22,7 +22,17 @@ public class WithdrawServlet extends HttpServlet {
 
         //Step 3 - Generate HTML content
         out.println("<html><head>   <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\"  </head><body>");
-        out.println("Withdraw");
+        double balance =  Double.parseDouble(request.getParameter("balance"));
+        double withdrawAmount = Double.parseDouble(request.getParameter("withdrawAmount"));
+        double total;
+
+        if( balance < withdrawAmount) {
+            out.println("Insufficient Balance, Try a amount below = " + balance);
+        }else {
+            total = balance - withdrawAmount;
+            out.println(total);
+        }
+
         out.println("</body></html>");
     }
 }

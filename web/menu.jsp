@@ -37,7 +37,7 @@
             <li class="list-group-item">
                 <form action="DepositServlet" method="GET">
                     <input type="hidden" name="balance" value=${param.balance}>
-                    <input type="number" class="form-control" placeholder="Enter Amount" name="depositAmount">
+                    <input type="number" class="form-control" placeholder="Enter Amount" name="depositAmount" required>
                     <br/>
                     <input class="btn btn-primary" type="submit" value="Deposit Money">
 
@@ -46,7 +46,7 @@
             <li class="list-group-item">
                 <form action="WithdrawServlet" method="GET">
                     <input type="hidden" name="balance" value=${param.balance}>
-                    <input type="number" class="form-control" placeholder="Enter Amount" name="withdrawAmount">
+                    <input type="number" class="form-control" placeholder="Enter Amount" name="withdrawAmount" required>
                     <br/>
                     <input class="btn btn-primary" type="submit" value="Withdraw Money">
                 </form>
