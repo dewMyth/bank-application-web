@@ -26,12 +26,12 @@
 
 <%--      Name--%>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Enter Name" name="username">
+        <input type="text" class="form-control" placeholder="Enter Name" name="username" required>
       </div>
 
 <%--      Accoount No--%>
       <div class="form-group">
-        <input type="number" class="form-control" placeholder="Enter Account Number" name="accountNo">
+        <input type="number" class="form-control" placeholder="Enter Account Number" name="accountNo" required>
       </div>
 
 <%--      Account Type--%>
@@ -48,13 +48,27 @@
     <div class="form-check text-left">
         <input class="form-check-input" type="radio" name="accountType" value="Mobile Account">
         <label class="form-check-label" >
-            Mobile Account
+            Checking account
         </label>
     </div>
+    <div class="form-check text-left">
+        <input class="form-check-input" type="radio" name="accountType" value="Mobile Account">
+        <label class="form-check-label" >
+            Money market account
+        </label>
+    </div>
+    <div class="form-check text-left">
+        <input class="form-check-input" type="radio" name="accountType" value="Mobile Account">
+        <label class="form-check-label" >
+            Individual retirement account
+        </label>
+    </div>
+
+
     <br />
     <%--      Initial Balance --%>
     <div class="form-group">
-        <input type="number" class="form-control" placeholder="Enter Initial Balance" name="balance">
+        <input type="number" class="form-control" placeholder="Enter Initial Balance" name="balance" required>
     </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>

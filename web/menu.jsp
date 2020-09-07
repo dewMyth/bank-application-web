@@ -21,6 +21,7 @@
 
     <div class="container">
         <ul class="list-group">
+
             <li class="list-group-item active"> Hi, ${param.username}</li>
             <li class="list-group-item">Your Account No : ${param.accountNo}</li>
             <li class="list-group-item">Your Account Type : ${param.accountType}</li>
