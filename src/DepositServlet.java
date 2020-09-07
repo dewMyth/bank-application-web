@@ -22,7 +22,19 @@ public class DepositServlet extends HttpServlet {
 
         //Step 3 - Generate HTML content
         out.println("<html><head>   <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\"  </head><body>");
-        out.println("Deposit");
+//        out.println("Enter the Amount You want to deposit");
+
+        int balance = Integer.parseInt(request.getParameter("balance"));
+        int depositAmount = 100;
+        int total;
+
+        if(depositAmount > 0) {
+            out.println(depositAmount + balance);
+
+        }else {
+            out.println("Enter a valid amount");
+        }
+
         out.println("</body></html>");
     }
 }
