@@ -27,32 +27,35 @@
             <li class="list-group-item">Your Account Type : ${param.accountType}</li>
         </ul>
         <br/>
-        <h1>What do you want to do ?</h1>
-        <ul class="list-group list-group-horizontal-sm">
-            <li class="list-group-item">
-                <form action="CheckBalanceServlet" method="GET">
-                    <input type="hidden" name="balance" value=${param.balance}>
-                    <input class="btn btn-primary" type="submit" value="Check Balance">
-                </form>
-            </li>
-            <li class="list-group-item">
-                <form action="DepositServlet" method="GET">
-                    <input type="hidden" name="balance" value=${param.balance}>
-                    <input type="number" class="form-control" placeholder="Enter Amount" name="depositAmount" required>
-                    <br/>
-                    <input class="btn btn-primary" type="submit" value="Deposit Money">
+        <div class="row col-md-8 offset-md-2">
+            <h1 class="offset-md-2">What do you want to do ?</h1>
+            <ul class="list-group list-group-horizontal-sm ">
+                <li class="list-group-item text-center">
+                    <form action="CheckBalanceServlet" method="GET">
+                        <input type="hidden" name="balance" value=${param.balance}>
+                        <input class="btn btn-primary" type="submit" value="Check Balance">
+                    </form>
+                </li>
+                <li class="list-group-item">
+                    <form action="DepositServlet" method="GET">
+                        <input type="hidden" name="balance" value=${param.balance}>
+                        <input type="number" class="form-control" placeholder="Enter Amount" name="depositAmount" required>
+                        <br/>
+                        <input class="btn btn-primary" type="submit" value="Deposit Money">
 
-                </form>
-            </li>
-            <li class="list-group-item">
-                <form action="WithdrawServlet" method="GET">
-                    <input type="hidden" name="balance" value=${param.balance}>
-                    <input type="number" class="form-control" placeholder="Enter Amount" name="withdrawAmount" required>
-                    <br/>
-                    <input class="btn btn-primary" type="submit" value="Withdraw Money">
-                </form>
-            </li>
-        </ul>
+                    </form>
+                </li>
+                <li class="list-group-item">
+                    <form action="WithdrawServlet" method="GET">
+                        <input type="hidden" name="balance" value=${param.balance}>
+                        <input type="number" class="form-control" placeholder="Enter Amount" name="withdrawAmount" required>
+                        <br/>
+                        <input class="btn btn-primary" type="submit" value="Withdraw Money">
+                    </form>
+                </li>
+            </ul>
+        </div>
+
     </div>
 
 
