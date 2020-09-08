@@ -46,7 +46,7 @@
                     </form>
                 </li>
                 <li class="list-group-item">
-                    <form action="WithdrawServlet" method="GET">
+                    <form action="WithdrawControllerServlet" method="GET">
                         <input type="hidden" name="balance" value=${param.balance}>
                         <input type="number" class="form-control" placeholder="Enter Amount" name="withdrawAmount" required>
                         <br/>
