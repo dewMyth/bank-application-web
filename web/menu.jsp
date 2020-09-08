@@ -25,6 +25,7 @@
             <li class="list-group-item active"> Hi, ${param.username}</li>
             <li class="list-group-item">Your Account No : ${param.accountNo}</li>
             <li class="list-group-item">Your Account Type : ${param.accountType}</li>
+            <li class="list-group-item">Your Balance : ${param.balance}</li>
         </ul>
         <br/>
         <div class="row col-md-8 offset-md-2">

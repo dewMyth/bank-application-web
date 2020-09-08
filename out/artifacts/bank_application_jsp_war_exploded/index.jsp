@@ -68,7 +68,7 @@
     <br />
     <%--      Initial Balance --%>
     <div class="form-group">
-        <input type="number" class="form-control" placeholder="Enter Initial Balance" name="balance" required>
+        <input type="hidden" class="form-control" name="balance" value=<%= (int)(Math.random() * (1000000 - 1000 + 1) + 1000)%> />
     </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>

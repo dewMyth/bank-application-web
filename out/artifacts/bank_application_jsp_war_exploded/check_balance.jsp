@@ -34,7 +34,7 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <div>Your currenct Account Balance is : ${param.balance}</div>
+                <div>Your current Account Balance is : ${param.balance}</div>
             </div>
             <!-- Modal footer -->
             <div class="modal-footer">
