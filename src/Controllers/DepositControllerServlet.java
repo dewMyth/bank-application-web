@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/DepositServletController")
+@WebServlet("/DepositControllerServlet")
 public class DepositControllerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -32,14 +32,14 @@ public class DepositControllerServlet extends HttpServlet {
             //Do the Calculation
             total = balance + depositAmount;
 
-            //Redirect to Success Page
+            //Redirect to Success Page View
             request.setAttribute("total", total);
             RequestDispatcher dispatcher = request.getRequestDispatcher("/deposit_success.jsp");
             dispatcher.forward(request,response);
 
         }else{
 
-            //Redirect to Error Page
+            //Redirect to Error Page View
             RequestDispatcher dispatcher = request.getRequestDispatcher("/deposit_error.jsp");
             dispatcher.forward(request,response);
 

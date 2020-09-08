@@ -31,13 +31,13 @@
             <h1 class="offset-md-2">What do you want to do ?</h1>
             <ul class="list-group list-group-horizontal-sm ">
                 <li class="list-group-item text-center">
-                    <form action="CheckBalanceServlet" method="GET">
+                    <form action="CheckBalanceControllerServlet" method="GET">
                         <input type="hidden" name="balance" value=${param.balance}>
                         <input class="btn btn-primary" type="submit" value="Check Balance">
                     </form>
                 </li>
                 <li class="list-group-item">
-                    <form action="DepositServletController" method="GET">
+                    <form action="DepositControllerServlet" method="GET">
                         <input type="hidden" name="balance" value=${param.balance}>
                         <input type="number" class="form-control" placeholder="Enter Amount" name="depositAmount" required>
                         <br/>
