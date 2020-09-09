@@ -10,25 +10,15 @@ import java.io.IOException;
 
 @WebServlet("/WithdrawControllerServlet")
 public class WithdrawControllerServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        withdraw(request,response);
-    }
-
-    private void withdraw(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         double balance =  Double.parseDouble(request.getParameter("balance"));
         double withdrawAmount = Double.parseDouble(request.getParameter("withdrawAmount"));
-        double total;
 
         if(withdrawAmount < balance) {
             //Do the Calculation
-            total = balance - withdrawAmount;
-
+            request.setAttribute("total", withdraw(balance, withdrawAmount));
             //Redirect to Success Page
-            request.setAttribute("total", total);
             RequestDispatcher dispatcher = request.getRequestDispatcher("/withdraw_success.jsp");
             dispatcher.forward(request,response);
         }
@@ -41,5 +31,10 @@ public class WithdrawControllerServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("/withdraw_error.jsp");
             dispatcher.forward(request,response);
         }
+
+    }
+
+    public double withdraw(double balance, double withdrawAmount)  {
+        return balance - withdrawAmount;
     }
 }

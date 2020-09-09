@@ -34,7 +34,7 @@ public class DepositControllerServlet extends HttpServlet {
         }
     }
 
-    private double deposit(double balance, double depositAmount) {
+    public double deposit(double balance, double depositAmount) {
         return balance + depositAmount;
     }
 }
