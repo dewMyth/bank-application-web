@@ -22,6 +22,7 @@ public class BankAccountControllerServlet extends HttpServlet {
 
     }
 
+
     private void addBankAccount(HttpServletRequest request, HttpServletResponse response) {
 
         //Read Data from index.jsp

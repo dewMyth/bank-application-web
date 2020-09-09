@@ -1,6 +1,5 @@
 package Controllers;
 
-import Models.BankAccount;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,28 +11,17 @@ import java.io.IOException;
 
 @WebServlet("/DepositControllerServlet")
 public class DepositControllerServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        deposit(request,response);
-    }
-
-    private void deposit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
         double balance =  Double.parseDouble(request.getParameter("balance"));
         double depositAmount = Double.parseDouble(request.getParameter("depositAmount"));
-        double total;
 
         if(depositAmount > 0) {
+
             //Do the Calculation
-            total = balance + depositAmount;
+            request.setAttribute("total",  deposit(balance,depositAmount));
 
             //Redirect to Success Page View
-            request.setAttribute("total", total);
             RequestDispatcher dispatcher = request.getRequestDispatcher("/deposit_success.jsp");
             dispatcher.forward(request,response);
 
@@ -45,4 +33,9 @@ public class DepositControllerServlet extends HttpServlet {
 
         }
     }
+
+    private double deposit(double balance, double depositAmount) {
+        return balance + depositAmount;
+    }
 }
+
