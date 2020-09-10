@@ -25,19 +25,20 @@
             <li class="list-group-item active"> Hi, ${param.username}</li>
             <li class="list-group-item">Your Account No : ${param.accountNo}</li>
             <li class="list-group-item">Your Account Type : ${param.accountType}</li>
+            <li class="list-group-item">Your Balance : ${param.balance}</li>
         </ul>
         <br/>
         <div class="row col-md-8 offset-md-2">
             <h1 class="offset-md-2">What do you want to do ?</h1>
             <ul class="list-group list-group-horizontal-sm ">
                 <li class="list-group-item text-center">
-                    <form action="CheckBalanceServlet" method="GET">
+                    <form action="CheckBalanceControllerServlet" method="GET">
                         <input type="hidden" name="balance" value=${param.balance}>
                         <input class="btn btn-primary" type="submit" value="Check Balance">
                     </form>
                 </li>
                 <li class="list-group-item">
-                    <form action="DepositServlet" method="GET">
+                    <form action="DepositControllerServlet" method="GET">
                         <input type="hidden" name="balance" value=${param.balance}>
                         <input type="number" class="form-control" placeholder="Enter Amount" name="depositAmount" required>
                         <br/>
@@ -46,7 +47,7 @@
                     </form>
                 </li>
                 <li class="list-group-item">
-                    <form action="WithdrawServlet" method="GET">
+                    <form action="WithdrawControllerServlet" method="GET">
                         <input type="hidden" name="balance" value=${param.balance}>
                         <input type="number" class="form-control" placeholder="Enter Amount" name="withdrawAmount" required>
                         <br/>

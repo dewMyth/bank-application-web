@@ -22,7 +22,7 @@
     <h2>Enter Your Details</h2>
 
 
-    <form action="menu.jsp" method="GET">
+    <form action="BankAccountControllerServlet" method="GET">
 
 <%--      Name--%>
       <div class="form-group">
@@ -46,19 +46,19 @@
         </label>
     </div>
     <div class="form-check text-left">
-        <input class="form-check-input" type="radio" name="accountType" value="Mobile Account">
+        <input class="form-check-input" type="radio" name="accountType" value="Checking Account">
         <label class="form-check-label" >
             Checking account
         </label>
     </div>
     <div class="form-check text-left">
-        <input class="form-check-input" type="radio" name="accountType" value="Mobile Account">
+        <input class="form-check-input" type="radio" name="accountType" value="Money Market Account">
         <label class="form-check-label" >
             Money market account
         </label>
     </div>
     <div class="form-check text-left">
-        <input class="form-check-input" type="radio" name="accountType" value="Mobile Account">
+        <input class="form-check-input" type="radio" name="accountType" value="Individual retirement account">
         <label class="form-check-label" >
             Individual retirement account
         </label>
@@ -68,7 +68,7 @@
     <br />
     <%--      Initial Balance --%>
     <div class="form-group">
-        <input type="number" class="form-control" placeholder="Enter Initial Balance" name="balance" required>
+        <input type="hidden" class="form-control" name="balance" value=<%= (int)(Math.random() * (1000000 - 1000 + 1) + 1000)%> />
     </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
